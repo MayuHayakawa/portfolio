@@ -10,6 +10,7 @@ const Navbar = () => {
 
   return(
     <>
+      {/* right-4 doesn't work */}
       <div 
         onClick={() => setIsOpen(!isOpen)}
         className="sticky top-4 right-4 text-3xl z-10"
