@@ -1,46 +1,53 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import LanguageContext from "../context/languagecontext";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaLanguage } from "react-icons/fa";
 import { Link as Scroll } from "react-scroll";
 
 import { navbarLinks } from "../constants/index";
 
 
 const Navbar = () => {
+  const { toggleLanguage } = useContext(LanguageContext);
   const [ isOpen, setIsOpen ] = useState(false);
 
   return(
-    <>
-      {/* right-4 doesn't work */}
+    <div className="relative">
       <div 
         onClick={() => setIsOpen(!isOpen)}
-        className="sticky top-4 right-4 text-3xl z-10"
+        className="absolute top-8 right-8 text-3xl lg:text-5xl z-10 cursor-pointer"
       >
-        { isOpen ? <AiOutlineClose /> : <AiOutlineMenu /> }
+        { isOpen ? <AiOutlineClose className="text-gray-200" /> : <AiOutlineMenu /> }
       </div>
-      <div className="relative">
-        <nav 
-          className={`absolute flex flex-col h-screen w-screen py-32 justify-between items-center transition-all duration-500 
-            ${ isOpen
-              ? "top-0 opacity-100 z-1"
-              : "top-[-200px] opacity-0 z-[-1]"
-            }
-          `}
-        >
-          { navbarLinks.map((link) => (
-            <Scroll
-              key={link.label}
-              to={link.id}
-              smooth={true}
-              duration={600}
-              offset={-30}
-              className="cursor-pointer"
-            >
-              {link.label}
-            </Scroll>
-          ))}
-        </nav>
+      <div 
+        onClick={toggleLanguage}
+        className="absolute top-8 right-24 text-3xl lg:text-5xl z-10 cursor-pointer"
+      >
+        <FaLanguage />
       </div>
-    </>
+      <nav 
+        className={`absolute flex flex-col h-screen w-screen py-32 justify-between items-center transition-all duration-700 bg-primary-600
+          ${ isOpen
+            ? "top-0 opacity-100 z-5"
+            : "top-[-1000px] opacity-0"
+          }
+        `}
+      >
+        { navbarLinks.map((link) => (
+          <Scroll
+            key={link.label}
+            to={link.id}
+            smooth={true}
+            duration={600}
+            offset={-30}
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-200 font-bold text-lg md:text-4xl"
+          >
+            {link.label}
+          </Scroll>
+        ))}
+      </nav>
+    </div>
   )
 }
 

@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <section>
-      <p>Developed and designed by Mayu Hayakawa</p>
-    </section>
+    <footer className="mt-16">
+      <div className="flex items-center justify-center h-20 text-white bg-primary-600">
+        <p>Developed by Mayu Hayakawa</p>
+      </div>
+    </footer>
   )
 }
 

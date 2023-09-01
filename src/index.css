@@ -7,9 +7,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light dark; */
+  color: #5C8DC4;
+  background-color: #FCF7F6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,5 +26,21 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+@layer components {
+
+  .section-container {
+    @apply m-auto
+  }
+
+  .section-title {
+    @apply font-bold text-3xl max-sm:text-lg ;
+  }
+
+  .section-description {
+    @apply text-gray-500 m-8 text-2xl max-md:text-lg max-sm:text-sm;
+  }
 }
 
