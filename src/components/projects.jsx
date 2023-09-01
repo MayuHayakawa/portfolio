@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import LanguageContext from "../context/languagecontext";
 
-import ProjectCard from "./cards/projects/projectcard";
+import ProjectCard from "./cards/projectcard";
 import { projects } from "../constants/index";
 
 const Projects = () => {

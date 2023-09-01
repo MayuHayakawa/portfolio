@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useContext } from "react";
-import LanguageContext from '../../../context/languagecontext';
+import LanguageContext from '../../context/languagecontext';
 
 const ProjectCard = ({ projects }) => {
   const { language } = useContext(LanguageContext);
@@ -20,27 +20,29 @@ const ProjectCard = ({ projects }) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute top-0 opacity-0 hover:opacity-100 w-full h-full bg-black bg-opacity-70 transition-opacity flex flex-col justify-center gap-4">
+            <div className="absolute top-0 opacity-0 hover:opacity-100 w-full h-full bg-black bg-opacity-70 transition-opacity flex flex-col justify-center gap-4 max-lg:gap-1">
               <div className="text-white">
-                <h2 className="text-3xl max-lg:text-2xl max-md:text-lg font-bold mb-2">{project.label}</h2>
-                <p className="text-lg max-lg:text-sm max-md:text-xs">
+                <h2 className="2xl:text-3xl max-lg:text-2xl max-md:text-lg max-sm:text-base font-bold mb-2 max-md:mb-0">
+                  {project.label}
+                </h2>
+                <p className="text-lg lg:text-sm max-md:text-xs">
                   { language === 'en' ? <>{project.comment_en}</> : <>{project.comment_jp}</> }
                 </p>
               </div>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-4 max-md:gap-2">
                 {project.tools.map((tool) => {
                   return (
                     <div key={tool} className="bg-white py-1 px-2 rounded-full">
-                      <div className="font-bold max-lg:text-xs">{tool}</div>
+                      <div className="font-bold max-sm:font-normal max-lg:text-xs">{tool}</div>
                     </div>
                   )
                 })}
               </div>
               <div className="flex justify-center gap-8">
-                <button className="text-white font-bold max-lg:text-xs p-1 rounded-md bg-primary-600">
+                <button className="text-white font-bold max-sm:font-normal max-lg:text-xs p-1 rounded-md bg-primary-600">
                   <a href={project.url} target="_blank" rel="noopener noreferrer">VIEW LIVE</a>
                 </button>
-                <button className="text-white font-bold max-lg:text-xs p-1 rounded-md bg-primary-600">
+                <button className="text-white font-bold max-sm:font-normal max-lg:text-xs p-1 rounded-md bg-primary-600">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">GIT HUB</a>
                 </button>
               </div>
