@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div 
         onClick={toggleLanguage}
-        className="absolute top-24 right-8 text-3xl lg:text-5xl z-10 cursor-pointer"
+        className="absolute top-8 left-8 text-3xl lg:text-5xl z-10 cursor-pointer"
       >
         <FaLanguage />
       </div>
