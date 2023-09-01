@@ -6,7 +6,7 @@ const ProjectCard = ({ projects }) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="mb-8 w-full grid grid-cols-2 max-lg:grid-cols-1 place-items-center px-40 max-lg:px-8 gap-8 max-lg:gap-16">
+    <div className="mb-8 w-full grid grid-cols-2 max-lg:grid-cols-1 place-items-center px-40 max-lg:px-2 gap-8 max-lg:gap-16">
       {projects.map((project) => {
         return (
           <div 
