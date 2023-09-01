@@ -27,7 +27,7 @@ const Summary = () => {
         </div>
         <div className="lg:w-48 lg:h-48 w-40 h-40 mx-auto">
           <img 
-            src="public/image/myphoto.png"
+            src="/image/myphoto.png"
             alt="photo"
             className="w-full h-full object-cover"
           />
