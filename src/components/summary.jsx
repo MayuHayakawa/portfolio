@@ -12,10 +12,10 @@ const Summary = () => {
           <div className="section-description">
             { language === 'en'
             ? 
-            <p>A Frontend Devepoper specialized in using <span className="text-primary-600">React.js, Next.js</span> and <span className="text-primary-600">Redux</span>.<br />
+            <p>A Frontend Developer specialized in using <span className="text-primary-600">React.js, Next.js</span> and <span className="text-primary-600">Redux</span>.<br />
               I also have some experience in backend development using <span className="text-primary-600">Node.js.</span><br />
               I&rsquo;m always developing applications with a passion<br />
-              for creating engaging, entertaining user experiences.🧡
+              for creating engaging and entertaining user experiences.🧡
             </p>
             :
             <p><span className="text-primary-600">React.js, Next.js</span> と <span className="text-primary-600">Redux</span>が得意なフロントエンドディベロッパーです！<br />

@@ -13,7 +13,7 @@ const AboutMe = () => {
           ?
             <p>
               Hello again! Thanks for scrolling this far!✨<br/>
-              I&rsquo;m goint to graduated from <span className="text-primary-600">CICCC&#40;Web and Mobile Application Development&#41;</span>.<br/>
+              I&rsquo;m going to graduate from <span className="text-primary-600">CICCC&#40;Web and Mobile Application Development&#41;</span>.<br/>
               Other than coding, I spend most of my free time playing FPS games.
             </p>
           :
