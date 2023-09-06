@@ -13,7 +13,7 @@ const Projects = () => {
         <h1 className="section-title m-8">Projects</h1>
         { language === 'en'
         ?
-        <h3>Hover over any projects to leran more!</h3>
+        <h3>Hover over any projects to learn more!</h3>
         :
         <h3>ホバーするとプロジェクトの概要が確認できます</h3>
         }
